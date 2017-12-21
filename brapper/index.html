@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=320">
+	<title>Brapper</title>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/TweenMax.js"></script>
+    <script src="js/ScrollMagic.js"></script>
+    <script src="js/animation.gsap.js"></script>
+    <script src="js/debug.addIndicators.js"></script>
+
+	<script src="js/bootstrap.js"></script>
+
+	<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXI_GVxOGnbMUYDzx-SWK0B4pPvqHUgk4"></script>
+	<script src="js/markerCluster.js"></script>
+</head>
+<body>
+	<div id="container-side" style="background: #000">
+		<header id="header" class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 header-left">
+						<div class="header-logo-section">
+							<img src="img/Logo_Header.png" alt="">
+						</div>
+						<div class="header-content-section">
+							<h1>Brapper</h1>
+							<h2>Social Network for motorcyclists.</h2>
+							<p>Be always online with like-minded people who<br>
+							share the passion for motorcycles and riding as<br>
+							you do.</p>
+						</div>
+						<div class="header-button-section">
+							<a href="#">
+								<i class="fab fa-apple fa-2x" data-fa-transform="grow--3em"></i>
+								<span>App Store</span>
+							</a>
+							<a href="#"  class="header-button-google">
+								<i class="fab fa-google-play fa-2x" data-fa-transform="grow--5em"></i>
+								<span>Google Play</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-6 header-right">
+						<img class="header-imgOne" src="img/Screen_HederSmall.png" alt="">
+						<img class="header-imgTwo"  src="img/Screen_HederBig.png" alt="">
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container-fluid container-map">
+			<div id='map' class="row"></div>
+		</div>
+
+		<div class="container-content" style="background: #fff;">
+			<div id="container1" class="container-fluid">
+				<div class="container">
+					<div class="row">
+							<div id="img1" class="col-md-6 content-left-img">
+								<img src="img/Screen1.png">
+							</div>
+						<div id="info1" class="col-md-6 content-right-info">
+							<h2>
+								Start you ride with <span>one tap</span><br>
+								and iform bikers nearest<br>
+								to you
+							</h2>
+							<div>
+								<a href="#">
+									<i class="fab fa-apple fa-2x" data-fa-transform="grow--3em"></i>
+									<span>App Store</span>
+								</a>
+								<a href="#"  class="header-button-google">
+									<i class="fab fa-google-play fa-2x" data-fa-transform="grow--5em"></i>
+									<span>Google Play</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6 content-left-img mobile-left-img">
+							<img src="img/Screen1.png">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid bg-e">
+				<div id="container2" class="container">
+					<div class="row">
+						<div id="info2" class="col-md-6 content-left-info">
+							<h2>
+								Discover the <span>map</span><br>
+								and make new friends
+							</h2>
+							<div>
+								<a href="#">
+									<i class="fab fa-apple fa-2x" data-fa-transform="grow--3em"></i>
+									<span>App Store</span>
+								</a>
+								<a href="#"  class="header-button-google">
+									<i class="fab fa-google-play fa-2x" data-fa-transform="grow--5em"></i>
+									<span>Google Play</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6 content-right-img">
+							<div id="img2">
+								<img src="img/Screen2.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<div id="container3" class="container">
+					<div class="row">
+						<div id="img3" class="col-md-6 content-left-img">
+							<img src="img/Screen3.png">
+						</div>
+						<div id="info3" class="col-md-6 content-right-info">
+							<h2>
+								Create your <span>club</span> or group<br>
+								of like-minded bikers
+							</h2>
+							<div>
+								<a href="#">
+									<i class="fab fa-apple fa-2x" data-fa-transform="grow--3em"></i>
+									<span>App Store</span>
+								</a>
+								<a href="#"  class="header-button-google">
+									<i class="fab fa-google-play fa-2x" data-fa-transform="grow--5em"></i>
+									<span>Google Play</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6 content-left-img mobile-left-img">
+							<img src="img/Screen3.png">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid bg-e">
+				<div id="container4" class="container">
+					<div class="row">
+						<div id="info4" class="col-md-6 content-left-info">
+							<h2>
+								Create your personal <span>trip</span><br>
+								and share to your buddies
+							</h2>
+							<div>
+								<a href="#">
+									<i class="fab fa-apple fa-2x" data-fa-transform="grow--3em"></i>
+									<span>App Store</span>
+								</a>
+								<a href="#"  class="header-button-google">
+									<i class="fab fa-google-play fa-2x" data-fa-transform="grow--5em"></i>
+									<span>Google Play</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6 content-right-img">
+							<div id="img4">
+								<img src="img/Screen4.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<div id="container5" class="container">
+					<div class="row">
+						<div id="img5" class="col-md-6 content-left-img">
+							<img src="img/Screen5.png">
+						</div>
+						<div id="info5" class="col-md-6 content-right-info">
+							<h2>
+								Enjoy your personal<br>
+								and group <span>chats</span>
+							</h2>
+							<div>
+								<a href="#">
+									<i class="fab fa-apple fa-2x" data-fa-transform="grow--3em"></i>
+									<span>App Store</span>
+								</a>
+								<a href="#"  class="header-button-google">
+									<i class="fab fa-google-play fa-2x" data-fa-transform="grow--5em"></i>
+									<span>Google Play</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6 content-left-img mobile-left-img">
+							<img src="img/Screen5.png">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid bg-e">
+				<div id="container6" class="container">
+					<div class="row">
+						<div id="info6" class="col-md-6 content-left-info">
+							<h2>
+								Choose a <span>category</span><br>
+								to find the service you need
+							</h2>
+							<div>
+								<a href="#">
+									<i class="fab fa-apple fa-2x" data-fa-transform="grow--3em"></i>
+									<span>App Store</span>
+								</a>
+								<a href="#"  class="header-button-google">
+									<i class="fab fa-google-play fa-2x" data-fa-transform="grow--5em"></i>
+									<span>Google Play</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6 content-right-img">
+							<div id="img6">
+								<img src="img/Screen6.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<div id="container7" class="container">
+					<div class="row">
+						<div id="img7" class="col-md-6 content-left-img">
+							<img src="img/Screen7.png">
+						</div>
+						<div id="info7" class="col-md-6 content-right-info">
+							<h2>
+								Get detailed infomation<br>
+								and connect to the desired<br>
+								<span>service</span>
+							</h2>
+							<div>
+								<a href="#">
+									<i class="fab fa-apple fa-2x" data-fa-transform="grow--3em"></i>
+									<span>App Store</span>
+								</a>
+								<a href="#"  class="header-button-google">
+									<i class="fab fa-google-play fa-2x" data-fa-transform="grow--5em"></i>
+									<span>Google Play</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6 content-left-img mobile-left-img">
+							<img src="img/Screen7.png">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid bg-e">
+				<div id="container8" class="container">
+					<div class="row">
+						<div id="info8" class="col-md-6 content-left-info">
+							<h2>
+								Follow your favorite moto<br>
+								and community <span>news</span><br>
+								providers
+							</h2>
+							<div>
+								<a href="#">
+									<i class="fab fa-apple fa-2x" data-fa-transform="grow--3em"></i>
+									<span>App Store</span>
+								</a>
+								<a href="#"  class="header-button-google">
+									<i class="fab fa-google-play fa-2x" data-fa-transform="grow--5em"></i>
+									<span>Google Play</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6 content-right-img">
+							<div id="img8">
+								<img src="img/Screen8.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid container-trophies">
+			<div class="container">
+				<div class="row">
+					<div class="trophies-img col-md-12">
+						<img class="trophiesOne" src="img/logo1.png" alt="">
+						<img class="trophiesTwo" src="img/logo2.png" alt="">
+						<img class="trophiesThree" src="img/logo3.jpg" alt="">
+					</div>
+				</div>
+			</div>			
+		</div>
+
+		<footer class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<img src="img/Logo_yellow.png" alt="">
+					<span>Copyright 2017 Biker AE FZ-LLC. All Rights Reserved.</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+
+
+    <script>
+    	var arr = [{lat: -31.563910, lng: 147.154312},{lat: -33.718234, lng: 150.363181}];
+		var jSon = JSON.stringify(arr);
+		var bikers = JSON.parse(jSon);
+    	var markers = [];
+    	  var icon_other = new google.maps.MarkerImage(
+		  'https://app2.bikerzzz.com/components/com_bikerapp/views/map/tmpl/me.png',
+		  new google.maps.Size(48,48),
+		  new google.maps.Point(0,0),
+		  new google.maps.Point(24,24)
+		 );
+	
+
+	function initMap() {
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 2,
+          center: {lat: -28.024, lng: 140.887}
+        });
+        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+         markers = bikers.map(function(location, i) {
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length], 
+            icon: icon_other
+          });
+        });
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'm'});
+      };
+
+		initMap();
+    </script>
+</body>
+</html>
