@@ -18,7 +18,7 @@ ul{
 li{
 	display: inline-block;
 }
-.active-nav{
+.active{
 	border-bottom: 3px solid #3e4950;
 }
 
@@ -38,6 +38,9 @@ li{
 	.info-header span{
 		margin: 0px 7.5px;
 	}
+		.info-header a{
+			color: #fff;
+		}
 		.info-header i{
 			font-size: 16px;
 			margin-right: 10px;
@@ -49,20 +52,19 @@ nav{
 	align-items: center;
 	padding: 15px 0px;
 }
-	nav ul{
-		text-align: right;
-	}
 		nav ul li a{
 			font-size: 13px;
 			font-weight: 700;
 			color: #555555;
 			text-transform: uppercase;
-			padding: 10px;
+			padding: 10px!important;
 			margin-left: 20px;
+			border-radius: 0px!important;
 			border-bottom: 3px solid #3e495000;
 			transition: all .3s ease-out;
 		}
 		nav ul li a:hover{
+			background: #fff!important;
 			border-bottom: 3px solid #3e4950;
 		}
 		nav ul li > ul{
@@ -137,7 +139,7 @@ nav{
     	justify-content: space-between;
 	    padding: 75px 30px 40px;
 	    border: 1px solid #fff;
-    	margin: -35px -5px 0px -5px;
+    	margin: -35px 0px 0px;
 	}
 		.request form div{
 			width: 100%;
@@ -165,6 +167,7 @@ nav{
 	.car-img{
 		position: relative;
 		display: block;
+		padding: 15px 0px;
 	}
 	.car-img:after{
 		position: absolute;
@@ -180,6 +183,9 @@ nav{
 	.car-img:hover:after{
 		background: rgba(0, 0, 0, 0.4);
 	}
+		.car-img img{
+			width: 100%;
+		}
 	.section-car h3{
 		font-size: 16px;
 		font-weight: 600;
@@ -248,8 +254,8 @@ nav{
 	}
 							/*W E L C O M E*/
 .section-welcome{
-	background-image: url('../img/prllx.jpg');
-	background-position: center -60px;
+	background-image: url('../img/slid-img1.jpg');
+	background-position: center;
 	background-size: cover;
 	text-align: center;
 	color: #fff;
@@ -339,10 +345,120 @@ nav{
     					color: #727272;
 						margin: 0px;
 					}
-footer{
-	background: #9cbbcc;
-	padding: 15px;
+							/*F O O T E R - T O P*/
+.footer-top{
+	background: #333;
+	padding: 50px 15px;
+	font-size: 12px;
 	color: #fff;
-	text-align: center;
 	margin-top: -16px;
 }
+	.footer-top a{
+		color: #999;
+	}
+	.footer-top .row{
+		display: flex;
+	}
+		.footer-top ul{
+			padding: 0px;
+		}
+			.footer-top li{
+				display: block;
+			}
+				.footer-top h3{
+					position: relative;
+					display: inline-block;
+					line-height: 1.2;
+					text-transform: uppercase;
+					font-size: 14px;
+					font-weight: 700;
+					padding: 0px 15px;
+					margin-bottom: 25px;
+				}
+				.footer-top h3:before{
+					content: '';
+				    display: block;
+				    width: 3px;
+				    height: 100%;
+				    background: #cccccc;
+				    position: absolute;
+				    left: 0;
+				    top: 0;
+				}
+				.footer-top h3:after{
+					content: '';
+				    display: block;
+				    width: 3px;
+				    height: 100%;
+				    background: #cccccc;
+				    position: absolute;
+				    right: 0;
+				    top: 0;
+				}
+		.footer-news a{
+			display: block;
+			float: left;
+			margin-bottom: 15px;
+		}
+			.footer-news img{
+				float: left;
+				margin-right: 15px;
+			}
+			.footer-news h5{
+				margin: 0px 0px 10px;
+			}
+		.footer-nav{
+			text-transform: uppercase;
+		}
+			.footer-nav li{
+				margin-bottom: 7px;
+			}
+		.footer-car{
+			text-transform: uppercase;
+		}
+			.footer-car li{
+				margin-bottom: 7px;
+			}
+		.footer-contacts{
+			background-image: url('../img/map.png');
+			background-size: auto;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+			.footer-contacts-addres{
+				margin-bottom: 50px!important;
+			}
+			.footer-contacts div{
+				display: flex;
+				color: #999;
+				margin-bottom: 7px;
+			}
+				.footer-contacts span{
+					display: inline-block;
+				}
+				.footer-contacts div i{
+					font-size: 16px;
+					margin-right: 10px;
+				}
+							/*F O O T E R - B O T T O M*/
+footer{
+	background: #222;
+	color: #999;
+	padding: 30px 15px;
+}
+	footer .row{
+		display: flex;
+		align-items: center;
+	}
+		.footer-bottom-left span{
+			font-size: 12px;
+			margin-left: 15px;
+		}
+		.footer-bottom-right{
+			font-size: 22px;
+			text-align: right;
+		}
+			.footer-bottom-right a{
+				color: #999;
+				margin-left: 15px;
+			}
