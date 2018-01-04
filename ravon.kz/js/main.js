@@ -10,3 +10,23 @@ $(document).ready(function(){
 		cssEase: 'linear'
 	});
 });
+
+$(document).ready(function(){
+	$('.cars-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		arrows: false,
+		fade: true,
+		asNavFor: '.slider-nav'
+	});
+	$('.slider-nav').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		autoplay: true,
+		asNavFor: '.cars-slider',
+		dots: true,
+		centerMode: true,
+		focusOnSelect: true
+	});
+});
